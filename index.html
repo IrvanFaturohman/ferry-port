@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#3ec7e8" />
+    <title>Ferry Port: Island Hop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage">
+        <canvas id="game"></canvas>
+        <div id="world-ui"></div>
+        <div id="hud">
+          <div id="top-left">
+            <button id="btn-sound" class="round-btn" title="Sound">🔊</button>
+            <button id="btn-debug" class="round-btn" title="Debug">⚙️</button>
+          </div>
+          <div id="level-box">
+            <div id="level-star"><span id="level-num">1</span></div>
+            <div id="level-bar"><div id="level-fill"></div><span id="level-text">0/6</span></div>
+          </div>
+          <div id="money-box"><span class="cash-icon"></span><span id="money">0</span></div>
+          <div id="objective"><span id="objective-icon">📍</span><span id="objective-text"></span></div>
+        </div>
+        <div id="joystick"><div id="joy-knob"></div></div>
+        <div id="banner"></div>
+        <div id="debug-panel" class="hidden">
+          <h3>Debug</h3>
+          <label>Game speed
+            <select id="dbg-speed">
+              <option value="1">x1</option>
+              <option value="2">x2</option>
+              <option value="4">x4</option>
+            </select>
+          </label>
+          <button id="dbg-money">+ $500</button>
+          <button id="dbg-stars">+ 5 ★</button>
+          <button id="dbg-ferry">Ferry: depart now</button>
+          <button id="dbg-reset">Restart</button>
+          <button id="dbg-close">Close</button>
+        </div>
+        <div id="start-screen">
+          <div class="title">Ferry Port</div>
+          <div class="subtitle">Island Hop</div>
+          <div class="hint">Drag anywhere to move</div>
+          <button id="btn-start">TAP TO PLAY</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
